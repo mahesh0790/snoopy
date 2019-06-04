@@ -15,6 +15,8 @@
     <link href="{{asset('css/bootstrap-tagsinput.css')}}" rel="stylesheet">
     <link href="{{asset('css/select2.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/dropzone.css')}}" rel="stylesheet">
+    <link href="{{asset('css/snoopy.css')}}" rel="stylesheet">
+
 
 
 

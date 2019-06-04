@@ -29,7 +29,7 @@
                             <label for="first_name" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text"  id="txtTest"  class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}">
+                                <input type="text"  id="txtTest"  class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}"required>
 
                                 @error('first_name')
                                     <span class="invalid-feedback" role="alert">
@@ -42,7 +42,7 @@
                             <label for="last_name" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
 
                             <div class="col-md-6">
-                            <input type="text" id="txtTest1" class="form-control @error('first_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}">
+                            <input type="text" id="txtTest1" class="form-control @error('first_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required>
 
                                 @error('last_name')
                                     <span class="invalid-feedback" role="alert">
@@ -56,7 +56,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -70,7 +70,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input  type="password" class="form-control @error('password') is-invalid @enderror" name="password">
+                                <input  type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -91,7 +91,7 @@
                             <label for="mobile_number" class="col-md-4 col-form-label text-md-right">{{ __('Mobile Number') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}">
+                                <input type="text" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}" required>
 
                                 @error('mobile_number')
                                     <span class="invalid-feedback" role="alert">

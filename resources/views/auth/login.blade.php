@@ -52,7 +52,6 @@
             <div class="col-md-12 text-center ">
             <button class="btn btn-w-m btn-primary" type="submit">Sign in</button><br>
             <a href="{{ route('password.request') }}">Forgot password?</a>
-            <p class="text-muted text-center">New member?<a href='/register'>Sign up here.</a>
             </p>
         </div>
              </div>
