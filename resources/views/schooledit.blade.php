@@ -222,7 +222,7 @@
                                 </div>
                           </div>
                           
-                            </div>
+                            
                        <div class="row form-group">
                         <div class="col-md-2 offset-md-4">
                         <input type="button" class="btn btn-warning" value = "CANCEL" onclick="history.go(0)" />

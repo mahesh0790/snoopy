@@ -91,12 +91,5 @@
      }
   
   </script>
-  <script type = "text/javascript">
-         <!--
-            function Warn() {
-               alert ("A Mail has been sent to Admin Email id with login details!");
-               
-            }
-         //-->
-      </script> 
+  
 @endsection

@@ -88,8 +88,11 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="row">
+                        <div class="col-md-2 offset-md-4">
+                        <input type="button" class="btn btn-warning" value = "CANCEL" onclick="history.go(0)" />
+                        </div>
+                            <div class="col-md-2">
                                 <button type="submit" class="btn btn-primary" value = "Click Me" onclick = "Warn();">
                                     <h4>{{ __('ADD NEW PORTAL ADMIN') }}</h4>
                                 </button>

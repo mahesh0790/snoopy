@@ -27,11 +27,13 @@
                     
                                     <select id="city" name="city" value="{{old('city')}}" class="form-control @error('city') is-invalid @enderror">
                                         <option value=" " selected disabled> SELECT CITY </option>
-                                    @foreach($cities as $key=>$city)
-                                        <option value="{{$key}}">{{$city}}</option>
-                                    @endforeach  
+                                     @foreach ($cities as $key => $value)
+                                   <option value="{{ $key }}" 
+                                {{ (collect(old('city'))->contains($key)) ? 'selected':'' }}  />
+                                {{ $value }}
+                                 </option>
+                                 @endforeach
                                        </select>
-
                                 @error('city')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -81,9 +83,12 @@
                                 <label for="board" class=" col-md-2 col-form-label text-md-center required">Board </label>
                                 <div class="col-md-4">
                                     <select data-placeholder="SELECT BOARD" class="chosen-select" multiple style="width:350px;" tabindex="4" id="board" name="boards[]" class="form-control @error('boards') is-invalid @enderror">
-                                    @foreach($boards as $key=>$board)
-                                        <option value="{{$key}}">{{$board}}</option>
-                                    @endforeach  
+                                    @foreach ($boards as $key => $value)
+                                    <option value="{{ $key }}" 
+                                    {{ (collect(old('boards'))->contains($key)) ? 'selected':'' }}  />
+                                    {{ $value }}
+                                    </option>
+                                @endforeach
                                        </select>
                                     @error('boards')
                                     <span class="invalid-feedback" role="alert">
@@ -94,9 +99,12 @@
                                 <label for="medium" class=" col-md-2 col-form-label text-md-center required">Medium </label>
                                 <div class="col-md-4">
                                     <select data-placeholder="SELECT MEDIUM" class="chosen-select" multiple style="width:350px;" tabindex="4" id="medium" name="mediums[]" class="form-control @error('mediums') is-invalid @enderror">
-                                    @foreach($mediums as $key=>$medium)
-                                        <option value="{{$key}}">{{$medium}}</option>
-                                    @endforeach  
+                                    @foreach ($mediums as $key => $value)
+                                    <option value="{{ $key }}" 
+                                    {{ (collect(old('mediums'))->contains($key)) ? 'selected':'' }}  />
+                                    {{ $value }}
+                                    </option>
+                                @endforeach
                                        </select>
                                     @error('mediums')
                                     <span class="invalid-feedback" role="alert">
@@ -109,10 +117,12 @@
                                 <label for="schoolType" class=" col-md-2 col-form-label text-md-center required">School Type </label>
                                 <div class="col-md-4">
                                     <select data-placeholder="SELECT SCHOOL TYPE" class="chosen-select" multiple style="width:350px;" tabindex="4" id="schoolType" name="school_types[]" class="form-control @error('school_types') is-invalid @enderror">
-                                    @foreach($school_types as $key=>$school_type)
-                                        <option value="{{$key}}">{{$school_type}}</option>
-                                    @endforeach  
-                                       
+                                    @foreach ($school_types as $key => $value)
+                                    <option value="{{ $key }}" 
+                                    {{ (collect(old('school_types'))->contains($key)) ? 'selected':'' }}  />
+                                    {{ $value }}
+                                    </option>
+                                @endforeach
                                        </select>
                                     @error('school_types')
                                     <span class="invalid-feedback" role="alert">
@@ -163,9 +173,12 @@
                               <label for="facilities" class=" col-md-2 col-form-label text-md-center required">Facilities </label>
                                 <div class="col-md-4">
                                 <select data-placeholder="SELECT FACILITY" class="chosen-select" multiple style="width:350px;" tabindex="4" id="facilities" name="facilities[]" class="form-control @error('facilities') is-invalid @enderror">
-                               @foreach($facilities as $key=>$facility)
-                                        <option value="{{$key}}">{{$facility}}</option>
-                                    @endforeach  
+                                @foreach ($facilities as $key => $value)
+                                    <option value="{{ $key }}" 
+                                    {{ (collect(old('facilities'))->contains($key)) ? 'selected':'' }}  />
+                                    {{ $value }}
+                                    </option>
+                                @endforeach
                                        
                                        </select>
                                     @error('facilities')
@@ -179,7 +192,7 @@
                               <div class="form-group row">
                               <label for="extraActivities" class=" col-md-2 col-form-label text-md-center">Extra Activities</label>
                                 <div class="col-md-4">
-                                    <textarea id="extraActivities" name="extra_activities" value="{{old('extra_activities')}}" class="form-control @error('extra_activities') is-invalid @enderror" row="7"></textarea>
+                                    <input id="extraActivities" name="extra_activities" value="{{old('extra_activities')}}" class="form-control @error('extra_activities') is-invalid @enderror" row="7">
                                     @error('extra_activities')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -212,7 +225,10 @@
                             </div>
                       </div> 
                              <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-5">
+                             <div class="col-md-2 offset-md-4">
+                        <input type="button" class="btn btn-warning" value = "CANCEL" onclick="history.go(0)" />
+                        </div>
+                            <div class="col-md-2">
                                 <button type="submit" class="btn btn-primary">
                                     <h4>{{ __('ADD SCHOOL') }}</h4>
                                 </button>
